@@ -1,0 +1,15 @@
+.page {
+    padding: 20px;
+  }
+  
+  .title {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .btn-group {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+  }
+  

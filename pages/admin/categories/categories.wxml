@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="header">
+    <text class="title">分类管理</text>
+  </view>
+
+  <view class="category-list">
+    <view
+      wx:for="{{categories}}"
+      wx:key="_id"
+      class="category-item"
+    >
+      <text>{{item.name}}</text>
+      <button
+        size="mini"
+        class="delete-btn"
+        data-id="{{item._id}}"
+        bindtap="deleteCategory"
+      >
+        删除
+      </button>
+    </view>
+  </view>
+
+  <view class="add-section">
+    <input
+      placeholder="输入新分类名"
+      bindinput="onInput"
+      value="{{newCategory}}"
+    />
+    <button class="add-btn" bindtap="addCategory">新增分类</button>
+  </view>
+</view>

@@ -1,0 +1,48 @@
+.container {
+  padding: 20rpx;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.category-list {
+  margin-bottom: 30rpx;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.add-section {
+  display: flex;
+  gap: 20rpx;
+}
+
+.add-section input {
+  flex: 1;
+  border: 1rpx solid #ddd;
+  border-radius: 10rpx;
+  padding: 10rpx;
+}
+
+.add-btn {
+  background-color: #03a9f4;
+  color: #fff;
+  border-radius: 10rpx;
+}

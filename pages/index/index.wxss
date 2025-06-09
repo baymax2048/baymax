@@ -1,0 +1,131 @@
+.page {
+  padding: 10px;
+}
+
+/* 分类栏 */
+.category-bar {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.category-item {
+  padding: 6px 10px;
+  margin: 4px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.category-item.active {
+  background-color: #ff5722;
+  color: #fff;
+}
+
+/* 菜品列表 */
+.dishes-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dish-item {
+  width: 48%;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.dish-image {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.dish-info {
+  padding: 5px;
+}
+
+.dish-name {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.dish-desc {
+  font-size: 12px;
+  color: #666;
+}
+
+.order-btn {
+  margin-top: 4px;
+  background-color: #4caf50;
+  color: #fff;
+}
+
+/* 转盘容器 */
+.wheel-container {
+  margin: 20px auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wheel-canvas {
+  width: 300px !important;
+  height: 300px !important;
+  border: 2px solid #ff5722;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* 🧭 自定义指针 */
+.pointer {
+  position: absolute;
+  /* canvas 300x300 的中心点 */
+  top: 105px;   
+  left: 175px;
+  /* 把指针自身的底部（-50%, -100%）放到 center */
+  transform: translate(-50%, -100%);
+  transform-origin: center bottom;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.arrow-head {
+  width: 0;
+  height: 0;
+  border-left: 20rpx solid transparent;
+  border-right: 20rpx solid transparent;
+  border-bottom: 30rpx solid red;
+}
+
+.arrow-body {
+  width: 6rpx;
+  height: 60rpx;
+  background-color: red;
+}
+
+/* 转盘按钮 */
+.start-btn {
+  margin-top: 10px;
+  background-color: #ff5722;
+  color: #fff;
+}
+
+/* 底部按钮栏 */
+.bottom-bar {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.bottom-btn {
+  background-color: #2196f3;
+  color: #fff;
+}

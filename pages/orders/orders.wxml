@@ -1,0 +1,9 @@
+<view class="order-item" wx:for="{{orders}}" wx:key="_id">
+  <view>菜名：{{item.dishName}}</view>
+  <view>分类：{{item.category}}</view>
+  <view>下单时间：{{item.createTimeStr}}</view>
+  <view>状态：{{item.status}}</view>
+  
+  <!-- 新增 删除按钮 -->
+  <button size="mini" type="warn" data-id="{{item._id}}" bindtap="deleteOrder">删除</button>
+</view>

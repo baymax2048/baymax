@@ -1,0 +1,75 @@
+<view class="container">
+  <!-- 左侧分类管理 -->
+  <view class="category-bar">
+    <view class="category-title">分类管理</view>
+
+    <view class="category-list">
+      <view
+        wx:for="{{categories}}"
+        wx:key="_id"
+        class="category-item"
+      >
+        <text>{{item.name}}</text>
+        <button
+          size="mini"
+          class="delete-btn"
+          data-id="{{item._id}}"
+          bindtap="deleteCategory"
+        >
+          删
+        </button>
+      </view>
+    </view>
+
+    <view class="add-category">
+      <input
+        class="category-input"
+        placeholder="请输入分类名"
+        bindinput="onInputCategory"
+        value="{{newCategory}}"
+      />
+      <button size="mini" class="add-btn" bindtap="addCategory">新增</button>
+    </view>
+  </view>
+
+  <!-- 右侧菜品管理 -->
+  <view class="dish-list">
+    <view class="header">
+      <text class="title">菜品管理</text>
+      <button class="add-btn" bindtap="goToAddDish">+ 新增菜品</button>
+    </view>
+
+    <view
+      wx:for="{{dishes}}"
+      wx:key="_id"
+      class="dish-item"
+    >
+      <image src="{{item.image}}" mode="aspectFill" class="dish-image" />
+      <view class="dish-info">
+        <view class="dish-name">{{item.name}}</view>
+        <view class="dish-desc">分类: {{item.category}}</view>
+        <view class="dish-desc">{{item.description}}</view>
+        <view class="dish-desc">下单次数: {{item.orderCount}}</view>
+
+        <view class="btn-group">
+          <button
+            size="mini"
+            class="edit-btn"
+            data-id="{{item._id}}"
+            bindtap="editDish"
+          >
+            编辑
+          </button>
+          <button
+            size="mini"
+            class="delete-btn"
+            data-id="{{item._id}}"
+            bindtap="deleteDish"
+          >
+            删除
+          </button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

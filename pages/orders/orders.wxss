@@ -1,0 +1,13 @@
+.container {
+    padding: 20rpx;
+  }
+  .order-item {
+    margin-bottom: 20rpx;
+    border: 1rpx solid #ccc;
+    padding: 10rpx;
+    border-radius: 8rpx;
+  }
+  .dish-name {
+    font-weight: bold;
+  }
+  
