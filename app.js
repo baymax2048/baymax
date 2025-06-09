@@ -12,12 +12,14 @@ App({
       logs.unshift(Date.now())
       wx.setStorageSync('logs', logs)
   
-      // 登录
-      wx.login({
-        success: res => {
-          // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        }
-      })
+      // 登录并获取 openid
+      wx.cloud.callFunction({ name: 'login' })
+        .then(res => {
+          wx.setStorageSync('openid', res.result.openid);
+        })
+        .catch(err => {
+          console.error('获取 openid 失败', err);
+        });
     },
     globalData: {
       userInfo: null
