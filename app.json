@@ -1,0 +1,14 @@
+{
+    "pages": [
+      "pages/index/index",
+      "pages/orders/orders",
+      "pages/admin/admin",
+      "pages/admin/list"
+    ],
+    "window": {
+      "navigationBarTitleText": "潮汕菜推荐",
+      "navigationBarBackgroundColor": "#ffffff",
+      "navigationBarTextStyle": "black"
+    }
+  }
+  
